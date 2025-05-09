@@ -1,0 +1,16 @@
+[package]
+name = "pystacks-rs"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[dependencies]
+
+[build-dependencies]
+bindgen = { version = "0.71.1", optional = true }
+pkg-config = "0.3.32"
+
+[features]
+# Generate the bindings.rs file, should only be used when refreshing the
+# bindings.
+bindgen-source = ["bindgen"]
